@@ -57,25 +57,12 @@ table {
 th {
     font-weight: 700;
     padding: 10px 2%;
-    text-align: center;
-}
-
-th.id {
-    width: 100px;
-}
-
-th.show {
-    width: 120px;
-    background-color: #EEEEEE;
+    text-align: left;
 }
 
 td {
     padding: 10px 2%;
     text-align: left;
-}
-
-td.id {
-    text-align: center;
 }
 
 button {
@@ -99,4 +86,21 @@ button {
     color: #155724;
     background-color: #d4edda;
     border: 1px solid #228833;
+}
+
+table#employee_list th {
+    width: 30%;
+    padding: 10px 2%;
+}
+
+table#employee_list td {
+    width: 29%;
+    padding: 10px 2%;
+}
+
+tr.row1 {
+        background-color: #f2f2f2;
+}
+tr.row0 {
+        background-color: #ffffff;
 }

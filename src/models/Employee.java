@@ -18,7 +18,7 @@ import javax.persistence.Table;
             query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"
             ),
     @NamedQuery(
-            name = "setEmployeeCount",
+            name = "getEmployeesCount",
             query ="SELECT COUNT(e) FROM Employee AS e"
             ),
     @NamedQuery(
@@ -31,7 +31,6 @@ import javax.persistence.Table;
             )
 })
 @Entity
-
 public class Employee {
     @Id
     @Column(name = "id")

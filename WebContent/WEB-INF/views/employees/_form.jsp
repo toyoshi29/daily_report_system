@@ -20,7 +20,7 @@
 <br />
 
 <label for="password">パスワード</label><br />
-<input type="password" name="password" value="{$employee.password}" />
+<input type="password" name="password" value="${employee.password}" />
 <br />
 <br />
 

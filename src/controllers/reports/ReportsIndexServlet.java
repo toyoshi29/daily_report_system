@@ -26,10 +26,9 @@ public class ReportsIndexServlet extends HttpServlet {
         EntityManager em = DBUtil.createEntityManager();
 
         int page;
-
         try{
             page = Integer.parseInt(request.getParameter("page"));
-        } catch (Exception e) {
+        } catch(Exception e) {
             page = 1;
         }
         List<Report> reports = em.createNamedQuery("getAllReports",Report.class)
@@ -37,7 +36,7 @@ public class ReportsIndexServlet extends HttpServlet {
                                  .setMaxResults(10)
                                  .getResultList();
 
-        Long reports_count = (long)em.createNamedQuery("getReportsCount", Long.class)
+        long reports_count = (long)em.createNamedQuery("getReportsCount", Long.class)
                                      .getSingleResult();
 
         em.close();
@@ -45,6 +44,7 @@ public class ReportsIndexServlet extends HttpServlet {
         request.setAttribute("reports", reports);
         request.setAttribute("reports_count", reports_count);
         request.setAttribute("page", page);
+
         if(request.getSession().getAttribute("flush") != null) {
             request.setAttribute("flush", request.getSession().getAttribute("flush"));
             request.getSession().removeAttribute("flush");
